@@ -18,17 +18,15 @@ public class Königreich {
             int einkommen = eingabe.nextInt();
 
             Einwohner einwohner;
-            if (bevölkerungsgruppe == 'K') {
-                einwohner = new König(name, einkommen);
-            }
-            else if (bevölkerungsgruppe == 'A') {
-                einwohner = new Adel(name, einkommen);
-            }
-            else if (bevölkerungsgruppe == 'B') {
-                einwohner = new Bauer(name, einkommen);
-            }
-            else {
-                einwohner = new Leibeigen(name, einkommen);
+            switch (bevölkerungsgruppe) {
+                case 'K': einwohner = new König(name, einkommen);
+                    break;
+                case 'A': einwohner = new Adel(name, einkommen);
+                    break;
+                case 'B': einwohner = new Bauer(name, einkommen);
+                    break;
+                case 'L': einwohner = new Leibeigen(name, einkommen);
+                    break;
             }
             System.out.println("Der Einwohner " + name + " muss " + einwohner.steuer() +
                     " Taler Steuern zahlen.");
