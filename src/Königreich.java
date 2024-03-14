@@ -17,7 +17,7 @@ public class Königreich {
             System.out.print("Wie viel verdient der Einwohner (im Jahr): ");
             int einkommen = eingabe.nextInt();
 
-            Einwohner einwohner;
+            Einwohner einwohner = null;
             switch (bevölkerungsgruppe) {
                 case 'K': einwohner = new König(name, einkommen);
                     break;
